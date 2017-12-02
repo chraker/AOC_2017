@@ -13,7 +13,8 @@ def checksumP1(input : list):
 def checksumP2(input : list):
     checksum = 0
     for row in input:
-        for c in row:
+        row = sorted(row)
+        for c in reversed(row):
             rowCheckSum = None
             for cc in row:
                 if not c % cc and not c is cc:
@@ -22,4 +23,5 @@ def checksumP2(input : list):
             if rowCheckSum is not None:
                 checksum += rowCheckSum
                 break
+            row.pop()
     return checksum
