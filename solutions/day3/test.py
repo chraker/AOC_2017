@@ -1,5 +1,6 @@
 import unittest
 from solutions.day3.part1 import Part1
+from solutions.day3.part2 import Part2
 
 
 class TestSolution2(unittest.TestCase):
@@ -12,7 +13,12 @@ class TestSolution2(unittest.TestCase):
         self.assertEquals(p1.run_input(1024), 31)
 
     def test_sol2part2(self):
-        pass
+        p2 = Part2()
+        self.assertEquals(p2.run_input(1), 1)
+        self.assertEquals(p2.run_input(2), 2)
+        self.assertEquals(p2.run_input(3), 4)
+        self.assertEquals(p2.run_input(800), 806)
+        self.assertEquals(p2.run_input(400), 747)
 
 if __name__ == '__main__':
     unittest.main()
